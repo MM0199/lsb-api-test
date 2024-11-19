@@ -1,6 +1,7 @@
 package com.example.demo;
 
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
