@@ -1,3 +1,0 @@
-[phases]
-[phases.setup]
-nixPkgs = ["jdk20"]  # Ensure JDK 18 is installed
