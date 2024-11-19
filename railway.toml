@@ -1,0 +1,4 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "./gradlew clean build"  # Your build command
+nixpacksConfigPath = "nixpacks.toml"    # Path to your custom nixpacks config file
