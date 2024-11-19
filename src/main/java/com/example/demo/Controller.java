@@ -75,7 +75,7 @@ public class Controller {
 
             return ResponseEntity.ok()
                     .contentType(MediaType.IMAGE_PNG)
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"embedded-image.PNG\"")
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"embedded-image.png\"")
                     .body(resource);
         } catch (Exception e) {
             e.printStackTrace();
