@@ -1,8 +1,3 @@
 [phases]
 [phases.setup]
-nixPkgs = ["jdk18"]  # Ensure JDK 18 is installed
-
-[phases.install]
-cmds = ["./gradlew clean build"]
-[deploy]
-startCommand = "java -jar build/libs/your-app.jar"
+nixPkgs = ["jdk20"]  # Ensure JDK 18 is installed
