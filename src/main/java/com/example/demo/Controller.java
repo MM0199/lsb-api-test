@@ -30,13 +30,13 @@ public class Controller {
             BufferedImage embeddedImage = OneLSBEncoder.encodeMessage(Normalization.to24Bit(originalImage), message);
 
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-            ImageIO.write(embeddedImage, "jpg", outputStream);
+            ImageIO.write(embeddedImage, "png", outputStream);
 
             ByteArrayResource resource = new ByteArrayResource(outputStream.toByteArray());
 
             return ResponseEntity.ok()
-                    .contentType(MediaType.IMAGE_JPEG)
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"embedded-image.jpg\"")
+                    .contentType(MediaType.IMAGE_PNG)
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"embedded-image.png\"")
                     .body(resource);
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,13 +69,13 @@ public class Controller {
             BufferedImage embeddedImage = TwoLSBEncoder.encodeMessage(Normalization.to24Bit(originalImage), message);
 
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-            ImageIO.write(embeddedImage, "jpg", outputStream);
+            ImageIO.write(embeddedImage, "png", outputStream);
 
             ByteArrayResource resource = new ByteArrayResource(outputStream.toByteArray());
 
             return ResponseEntity.ok()
-                    .contentType(MediaType.IMAGE_JPEG)
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"embedded-image.jpg\"")
+                    .contentType(MediaType.IMAGE_PNG)
+                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"embedded-image.PNG\"")
                     .body(resource);
         } catch (Exception e) {
             e.printStackTrace();
