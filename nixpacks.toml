@@ -1,0 +1,8 @@
+[phases.setup]
+jdk_version = "18"
+
+[phases.build]
+cmd = "./gradlew clean build"
+
+[phases.start]
+cmd = "java -jar build/libs/demo-0.0.1-SNAPSHOT.jar"
